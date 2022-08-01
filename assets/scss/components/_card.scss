@@ -1,0 +1,39 @@
+.feedback-card{
+   height: 100%;
+   border-radius: 15px;
+   padding: 20px;
+   min-height: 345px;
+   background: #fff;
+
+   .title{
+      color: #025ea1;
+      font-weight: 600;
+   }
+
+   .fa-star{
+      color: #ffcc32;
+   }
+}
+
+.btn-secondary{
+   background: #fff;
+   color: #000;
+}
+
+.package{
+   position: absolute;
+   bottom: -40px;
+   right: -20px;
+   .package-card{
+      background: #fff;
+      border-radius: 3px;
+      padding: 15px;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+      margin-bottom: 5px;
+   }
+
+   @media screen and (max-width: 992px){
+      position: static;
+      margin: 10px 0;
+   }
+}
