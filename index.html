@@ -8,14 +8,12 @@
   <link rel='shortcut icon' href='assets/images/fav-icon.png' type='image/x-icon'>
   <!-- fonrawesom -->
   <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
-  <!-- font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- countrySelect -->
+  <link rel="stylesheet" href="assets/vendor/Swiper-slider/css/swiper-bundle.min.css">
+  <!-- swiper -->
+  <link rel="stylesheet" href="assets/vendor/country-picker-flags/css/countrySelect.min.css">
   <!-- bootstrap -->
   <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-  <!-- swiper -->
-  <link rel="stylesheet" href="assets/vendor/Swiper-slider/css/swiper-bundle.min.css">
   <!-- custom css sheet -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -66,7 +64,7 @@
 
 
   <!-- banner-main -->
-  <section class="banner-main py-5">
+  <section class="banner-main py-lg-5 py-4">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6">
@@ -92,15 +90,15 @@
   <!-- package delivery -->
   <section class="package-delivery py-5">
     <div class="container">
-      <div class="row align-items-center gx-0 gx-lg-5">
-        <div class="col-lg-6  pe-0 pe-lg-5">
+      <div class="row align-items-center gx-0 gx-lg-5 gy-lg-0 gy-5">
+        <div class="col-lg-6  pe-0 pe-lg-5 order-lg-1 order-2">
           <div class="position-relative h-100 w-100">
             <form class="w-100">
               <div class="p-4 bg-white rounded-3">
                 <div class="row pb-4">
                   <div class="col-md-6 mb-3">
                     <p>Ship from</p>
-                    <div class="dropdown">
+                    <!-- <div class="dropdown">
                       <button class="btn btn-secondary w-100 text-start" type="button" id="from" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="assets/images/usa.png" alt="uk" width="30" class="img-fluid me-2"> <span>New York</span>
                       </button>
@@ -109,11 +107,12 @@
                         <li><a class="dropdown-item" href="#">Another action</a></li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                       </ul>
-                    </div>
+                    </div> -->
+                    <input id="country_selector" class="form-control" type="text">
                   </div>
                   <div class="col-md-6 mb-3">
                     <p>Ship to</p>
-                    <div class="dropdown">
+                    <!-- <div class="dropdown">
                       <button class="btn btn-secondary w-100 text-start" type="button" id="to" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="assets/images/uk.png" alt="uk" width="30" class="img-fluid me-2"> <span>London</span>
                       </button>
@@ -122,7 +121,8 @@
                         <li><a class="dropdown-item" href="#">Another action</a></li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                       </ul>
-                    </div>
+                    </div> -->
+                    <input id="country_selector2" class="form-control" type="text">
                   </div>
   
                   <div class="col-md-6 mb-3">
@@ -143,7 +143,7 @@
                   </div>
   
                   <div class="col-12 mb-3">
-                    <label for="service">Transit</label>
+                    <label for="service">Service</label>
                     <input class="form-control" type="text" placeholder="FedEx Intematimal Priority" id="service">
                   </div>
                 </div>
@@ -184,9 +184,10 @@
               </div>
             </div>
           </div>
+          <p>Save an Extra $22.51 by utilizing a FedEx Envelop instead of your own packaging.</p>
         </div>
 
-        <div class="col-lg-6 pt-3 pt-lg-0">
+        <div class="col-lg-6 order-lg-2 order-1">
           <div class="description">
             <h1 class="section-heading fs-3">Package Type Makes Difference</h1>
             <p class="py-3">By selecting the appropriate package type, you may
@@ -339,7 +340,7 @@
               our great promotions!</p>
             <form class="w-100">
               <div class="d-flex justify-content-between pt-3 w-100">
-                <input class="p-2 w-75" type="email" placeholder="Your Email Address">
+                <input class="p-2 w-75 rounded border-0" type="email" placeholder="Your Email Address">
                 <button type="submit" class="btn btn-yellow text-black d-flex align-items-center ms-1">Subscribe</button>
               </div>
             </form>
@@ -367,10 +368,23 @@
   </footer>
   <!-- footer ended -->
 
+ 
+
+
 
   <!-- script -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/country-picker-flags/js/countrySelect.min.js"></script>
   <script src="assets/vendor/Swiper-slider/js/swiper-bundle.min.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script>
+    $("#country_selector").countrySelect({
+      defaultCountry:"us"
+    })
+    $("#country_selector2").countrySelect({
+      defaultCountry:"uk"
+    })
+  </script>
 </body>
 </html>

@@ -16,6 +16,9 @@
          &:not(:last-child){
             margin-right: 20px;
          }
+         .nav-link {
+            font-weight: 500;
+         }
       }
    }
 }
