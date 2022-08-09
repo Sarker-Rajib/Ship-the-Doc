@@ -2,8 +2,12 @@
    height: 100%;
    border-radius: 15px;
    padding: 20px;
-   min-height: 345px;
+   min-height: 365px;
    background: #fff;
+
+   &.active{
+      // margin: 0 90px;
+   }
 
    .title{
       color: #025ea1;

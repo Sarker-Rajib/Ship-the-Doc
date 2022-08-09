@@ -2,12 +2,12 @@
   var swiper = new Swiper(".feedbackSwiper", {
     freeMode: true,
     loop: true,
+    // centeredSlidesBounds: false,
     breakpoints: {
       // when window width is >= 320px
       320: {
       slidesPerView: 1,
       spaceBetween: 40,
-      centeredSlides: true,
       },
       // when window width is >= 992px
       768: {
@@ -22,6 +22,8 @@
   });
 }
 
+
+// codes for items choosing cheek
 {
   let option1 = document.getElementById("success-outlined");
   let option2 = document.getElementById("danger-outlined");
