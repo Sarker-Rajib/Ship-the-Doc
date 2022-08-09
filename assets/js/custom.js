@@ -1,3 +1,4 @@
+// codes for feedback slider
 {
   var swiper = new Swiper(".feedbackSwiper", {
     freeMode: true,
