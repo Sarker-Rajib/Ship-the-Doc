@@ -8,16 +8,16 @@
       // when window width is >= 320px
       320: {
       slidesPerView: 1,
-      spaceBetween: 40,
+      spaceBetween: 20,
       },
       // when window width is >= 992px
       768: {
       slidesPerView: 2,
-      spaceBetween: 40,
+      spaceBetween: 20,
       },
       1200: {
       slidesPerView: 3,
-      spaceBetween: 40
+      spaceBetween: 30
       }
     }
   });
